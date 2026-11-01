@@ -1,8 +1,12 @@
 // CEMS Event Controller - Core Registration & Capacity
+// Resolved Conflict: Combined category filtering with waitlist support
+const { filterEventsByCategory } = require('./event_list');
+
 class EventController {
-    constructor(eventId, capacity, maxWaitlist = 20) {
+    constructor(eventId, capacity, category = "General", maxWaitlist = 20) {
         this.eventId = eventId;
         this.capacity = capacity;
+        this.category = category;
         this.maxWaitlist = maxWaitlist;
         this.registeredCount = 0;
     }
