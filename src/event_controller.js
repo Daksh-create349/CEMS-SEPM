@@ -1,8 +1,9 @@
 // CEMS Event Controller - Core Registration & Capacity
 class EventController {
-    constructor(eventId, capacity) {
+    constructor(eventId, capacity, maxWaitlist = 20) {
         this.eventId = eventId;
         this.capacity = capacity;
+        this.maxWaitlist = maxWaitlist;
         this.registeredCount = 0;
     }
 
@@ -12,7 +13,3 @@ class EventController {
 }
 
 module.exports = EventController;
-
-function validateStudentEligibility(studentId) {
-    return studentId && studentId.startsWith("1500");
-}
