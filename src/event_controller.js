@@ -12,3 +12,7 @@ class EventController {
 }
 
 module.exports = EventController;
+
+function validateStudentEligibility(studentId) {
+    return studentId && studentId.startsWith("1500");
+}
